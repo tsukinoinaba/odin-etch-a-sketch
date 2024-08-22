@@ -7,9 +7,11 @@
 
 .row {
     display: flex;
-    flex: auto;
+    flex: 1;
 }
 
 .cell {
-    flex: auto;
+    flex: 1;
+    box-sizing: border-box;
+    border: 1px solid gray;
 }

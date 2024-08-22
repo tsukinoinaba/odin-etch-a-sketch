@@ -17,7 +17,7 @@ function generateGrid (size) {
 }
 
 function colourOnHover () {
-    this.style.backgroundColor = "purple";
+    this.style.backgroundColor = "lavender";
 }
 
 const container = document.querySelector("#container");
