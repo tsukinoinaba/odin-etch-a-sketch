@@ -13,5 +13,9 @@
 .cell {
     flex: 1;
     box-sizing: border-box;
-    border: 1px solid gray;
+    border: 1px solid #d3d3d3;
+}
+
+button {
+    margin: 50px;
 }
