@@ -8,11 +8,16 @@ function generateGrid (size) {
         for (let j = 0; j < size; j++) {
             const cell = document.createElement("div");
             cell.classList.add("cell");
+            cell.addEventListener("mouseenter", colourOnHover);
             row.appendChild(cell);
         }
         
         container.appendChild(row);
     }
+}
+
+function colourOnHover () {
+    this.style.backgroundColor = "purple";
 }
 
 const container = document.querySelector("#container");
