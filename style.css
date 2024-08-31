@@ -10,10 +10,15 @@
     flex: 1;
 }
 
-.cell {
+.grid {
+    display: flex;
     flex: 1;
     box-sizing: border-box;
     border: 1px solid #d3d3d3;
+}
+
+.cell {
+    flex: 1;
 }
 
 button {

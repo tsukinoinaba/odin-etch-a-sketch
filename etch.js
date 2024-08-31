@@ -6,10 +6,16 @@ function generateGrid (size) {
         row.classList.add("row");
         
         for (let j = 0; j < size; j++) {
+            const cellContainer = document.createElement("div");
+            cellContainer.classList.add("grid");
+
             const cell = document.createElement("div");
             cell.classList.add("cell");
             cell.addEventListener("mouseenter", colourOnHover);
-            row.appendChild(cell);
+            cell.style.opacity = 0;
+            
+            cellContainer.appendChild(cell);
+            row.appendChild(cellContainer);
         }
         
         container.appendChild(row);
@@ -19,6 +25,7 @@ function generateGrid (size) {
 function colourOnHover () {
     const randomColor = Math.floor(Math.random() * 16**6);
     this.style.backgroundColor = "#" + randomColor.toString(16);
+    this.style.opacity = Math.min(1, parseFloat(this.style.opacity) + 0.1);
 }
 
 function createPopup () {
