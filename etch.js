@@ -17,7 +17,8 @@ function generateGrid (size) {
 }
 
 function colourOnHover () {
-    this.style.backgroundColor = "purple";
+    const randomColor = Math.floor(Math.random() * 16**6);
+    this.style.backgroundColor = "#" + randomColor.toString(16);
 }
 
 function createPopup () {
